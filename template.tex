@@ -1,0 +1,326 @@
+\documentclass[9pt]{beamer}
+%\usefonttheme{serif} 
+\usepackage{multimedia}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{caption}
+%This is a semiar template 
+%created by Bijumon T
+%Asst.Prof. In Computer Engg:
+%Model Engg: College
+
+\usetheme{JuanLesPins}
+\begin{document}
+\begin{frame}
+%\flushleft{}
+\title {\textbf{File Sharing Application using P2P Protocol}\\
+}
+\author { Emmanuel Antony (22) \\
+Malavika S Menon (32)\\
+Rose Joseph (48) \\
+Varun Krishna S (61)\\ 
+\hfill \break
+Govt. Model Engineering College\\
+ Thrikkakkara }\\
+\maketitle
+\end{frame}
+\begin{frame}[shrink]{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin {frame}[shrink]{Introduction}
+\begin{itemize}
+\item At present, no major app provides a smooth user experience for transferring files using peer-to-peer protocols. 
+\item We intend to develop a web application, with enhanced user experience for easier transfer of files based on P2P protocol.
+\item  This would also help enhance speed and divide the payload borne by the sender for sharing the file to a large number of users. 
+\end{itemize}
+\end{frame}
+
+\section{Areas of Interest}
+\begin{frame} {Areas of Interest}
+
+\begin{itemize}
+	 \item Computer Networks
+     \item Web \& App Development
+\end{itemize}
+\end {frame}
+
+\section{Existing Systems }
+\begin{frame} {Existing Systems }
+The primary modes of sharing files that can be compared with the proposed solution are based on
+\begin{itemize}
+    \item WiFi Direct (Xender/ShareIt)
+    \item Messaging Application(Whatsapp/Telegram)
+    \item Cloud (Google Drive/Dropbox)
+\end{itemize}
+\end{frame} 
+
+\subsection{WiFi Direct - Xender/ShareIt}
+\begin{frame}{WiFi Direct - Xender/ShareIt}
+ \begin{itemize}
+     \item These Apps work using a technology called WiFi direct. It uses the WiFi card in your phone to connect with another device. 
+     \item It sets up a private connection between the two devices so that you will be able to transfer files without any interference at very high speeds. 
+     \item It is very similar to Bluetooth, one device acts as a server while the other is the client. The first step is creating a connection between the sockets of the two devices. 
+     \item Once these dynamic sockets are linked you will be able to send data between them both.
+ \end{itemize}
+ \end{frame}
+
+\subsection{Messaging Application - Whatsapp/Telegram/Signal}
+\begin{frame}{Messaging Application}
+ \begin{itemize}
+     \item Traditional messaging applications like WhatsApp, Telegram and Signal can be used to share files. These apps upload the files onto a common server and the clients in the group can redownload it anytime they want.
+     \item They go for a server client model. Works really well when the server is up and online.
+     \item If the server is offline, like the Facebook downtime recently, using these services to share files is near impossible
+     \item The exact mechanism by which the file is transferred differs based on the application
+ \end{itemize}
+                 
+\end{frame}
+
+
+\subsection{Cloud - Google Drive/Dropbox}
+\begin{frame}{Cloud - Google Drive/Dropbox}
+ \begin{itemize}
+     \item Sharing files using cloud is a quick and easy process.
+     \item Centralised servers are usually fast and upload and download speeds are quick.
+     \item Like messaging applications, there is a single point of failure. And if cloud service provider is unavailable or if there is a server downtime, then using these services becomes near impossible.
+    %  \item Google is closed source so we wouldn’t know how the files are stored, unless we manually encrypt it and upload it. There are privacy concerns that lie with it. 
+ \end{itemize}
+\end{frame}
+
+\section{Disadvantages of Existing System}
+\begin{frame}{Disadvantages of Existing System}
+ \begin{itemize}
+     \item Wifi Direct limited by capability of mobile hotspot. Uses direct point to point communication. 
+     \item Cloud - Bandwidth wastage, one central server whose downtime will affect the entire network. 
+     \item Messaging Applications - Focuses on a different area of messaging with file sharing, where as our application prioritises file sharing. 
+ \end{itemize}
+\end{frame}
+
+\section{Why P2P?}
+\begin{frame}{Why P2P?}
+ \begin{itemize}
+     \item Peer-to-peer is a model in which everyone becomes a server. There is no central server; everyone who uses the network acts as their own server. \item Speed on a traditional web host is quite limited. Especially for larger files, it would require a burst of speed that isn't sustainable for long periods and locks the server up for other users. Bandwidth is also costly. 
+     \item In the client-server model, performance degrades with more users, as the same amount of bandwidth is shared among more people.
+     \item In P2P, it's actually faster when more users download a file. Instead of taking the whole file from one user, you're taking smaller pieces from hundreds or thousands of others. Even if they only have a little bandwidth to spare, the combined connections mean you get the maximum speed possible. 
+ \end{itemize}
+    
+\end{frame}
+
+
+\section{Proposed System - Features }
+\begin{frame}{Proposed System - Features }
+ \begin{itemize}
+     \item To use the existing torrent protocol as the base layer protocol and solve UI/UX pain points with respect to torrenting a file. 
+     \item Have groups to which files can be shared easily p2p via the application instead of having to upload the asset to a centralised server.
+     \item The application is meant to be web based primarily (likely to be over UDP).
+     \item Once this is accomplished, protocol layer innovations will also be considered to make p2p file sharing more efficient for specific niche use cases.
+ \end{itemize}
+\end{frame}
+
+\section{Literature Survey}
+\begin{frame}{}
+    \large Literature Survey
+\end{frame}
+\begin{frame}{P2P Networking: An Information-Sharing Alternative}
+\begin{itemize}
+     \item This paper considers P2P networks as an alternative to traditional-client server models & puts the various advantages and disadvantages it offers. 
+
+\item Disadvantages
+\begin{itemize}
+   \item P2P networks use protocols that allow individual nodes to participate easily, but this could result in decreased security. 
+\item Without a central server, each node may only contain a partial index of the members it knows.This results in poorer efficiency for search and retrieval. 
+\item Listed information may be cluttered with significant noise.
+\item The Wild Web - Letting any user freely share any type of information raises issues of copyright infringement, intellectual piracy, and the potential spread of undesirable content.
+
+\item But, under a controlled environment, P2P networks can be effective for sharing.
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\begin{itemize}
+    \item Advantages
+
+\begin{itemize}
+    \item Enhanced load balancing:
+Several techniques used to monitor traffic and redistribute content between nodes if required. 
+\item Dynamic Information Repository:
+Any user can download information from a node and start distributing it too. So, content in high demand can be spread to other nodes. 
+\item Redundancy and fault tolerance:
+Replication of information at multiple nodes helps increase the availability. Decentralisation helps with fault tolerance. 
+\item Content Based Addressing:
+Addressing reaches a higher level in the semantic hierarchy because users specify a content identifier but not a physical location.
+\end{itemize}
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{PeerDB : A P2P-based System for Distributed Data Sharing}
+\begin{itemize}
+    \item Features 
+    \begin{itemize}
+    \item Each participating node is a full-fledged object management system that supports content based search.
+\item Users can share data without a global schema
+\item Adopts mobile agents to assist in query processing
+\item Supports mechanisms to keep promising peers in close proximity based on some criterion.
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Advantages
+    \begin{itemize}
+    \item Performs more than coarse level sharing of files
+\item Better response time for queries 
+
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Disadvantages
+    \begin{itemize}
+    \item Not primarily a file sharing application, mainly a distributed database management system.
+
+\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Applications
+    \begin{itemize}
+    \item Health Care, Genomic Data, Data Caching
+
+\end{itemize}
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{The Bittorrent P2P File-Sharing System: Measurements and Analysis}
+    \begin{itemize}
+        \item BitTorrent is a P2P file-sharing prototype that has attracted millions of users. Makes up around 53\% of all P2P traffic.
+        \item Only a file-downloading protocol. It uses other global components like websites for finding files.
+        \item Advantages
+        \begin{itemize}
+            \item System of moderators help maintain the integrity of content on network and prevent pollution of data
+\item Even average download speeds of 240 kbps allowed us to download large files in one day. 
+
+        \end{itemize}
+        \item Disadvantages
+        \begin{itemize}
+            \item Uses a global component like suprnova.org. When its server was down, it affected the entire network.
+\item The system of moderators need global components, not distributed. 
+\item When the popularity drops and the last peer/seed with certain content goes offline, the content dies. 
+\item Peers should be given incentives to seed, such as bartering a file.
+
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Looking up data in P2P}
+    \begin{itemize}
+        \item The main challenge in P2P computing is to design and implement a robust and scalable distributed system composed of inexpensive, individually unreliable computers in unrelated administrative domains. The participants in a typical P2P system might include computers at homes, schools, and businesses, and can grow to several million concurrent participants.
+        \item The ability to lookup data to access the data becomes very important in the process
+        \item Advantages
+        \begin{itemize}
+            \item Helps optimise the lookup problem in finding the location of the data
+\item Does not require a centralised root server like the dns to enable the lookup 
+
+        \end{itemize}
+        \item Disadvantages
+        \begin{itemize}
+            \item All of the methods use a distributed hash table approach in discovering nodes
+\item These algorithms retrieve data based on a unique identifier and keyword based search thereby making the user experience painful
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Multi-Torrent: a Performance Study}
+    \begin{itemize}
+        \item Incentivizing users to stay in a multi-torrent environment and investigates the performance impact due to the same
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------        \item Advantages
+        \begin{itemize}
+            \item Multiple torrents allows for faster download speeds
+            \item Incentives are provided to the seeders so that they have reason to keep the torrent alive
+        \end{itemize}
+        \item Disadvantages
+        \begin{itemize}
+            \item The existing protocol has to be updated, and this might result in a loss of interoperability with other torrent clients
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Analyzing The DC File Sharing Network}
+    \begin{itemize}
+        \item DC (Direct Connect) Network is a P2P file-sharing network, which is the second most popular file sharing network (after BitTorrent) in some places. It consists of regular users (clients) connected to one or more central hubs.
+        \item Advantages
+        \begin{itemize}
+            \item Users can select hubs which are geographically near, to get high speeds.
+        \end{itemize}
+        \item Disadvantages
+        \begin{itemize}
+            \item It doesn’t cache search queries.
+            \item During a survey it was seen there was a lot of duplicate text queries (about 40\%)
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Comparison Table}
+    \begin{tabularx}{1.0\textwidth} { 
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X | }
+        \hline Paper & Techniques & Pros & Cons \\
+        \hline P2P Networking: An Information-Sharing Alternative & P2P network as a mode of file sharing over normal client/server model, no central server & Enhanced load balancing, redundancy and fault tolerance, content based addressing, dynamic information repository & Decreased security, copyright infringement, poorer search/retrieval time as nodes may contain only parietal information \\
+        \hline PeerDB : A P2P-based System for Distributed Data Sharing & Participating node is a full fledged abject management system supporting content based search  & Good query response time, more fine than coarse file sharing & Not a file transferring applications primarily, works more as a distributed database \\
+        \hline
+    \end{tabularx}
+\end{frame}
+
+\begin{frame}{Comparison Table}
+    \begin{tabularx}{1.0\textwidth} { 
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X | }
+        \hline Paper & Techniques & Pros & Cons \\
+        \hline The BitTorrent P2P File-Sharing System: Measurements and Analysis & File downloading based on P2P network & Good average download speed of 240kbps and upwards, system moderators helps maintain integrity of the data & Peers should be incentivised, moderators need a global component not a distributed one, partial fault tolerance is non existent \\
+        \hline Looking up data in P2P & Distributed hash table & Does not require a central server & Use a unique identifier and keyword search not supported \\
+        \hline
+    \end{tabularx}
+\end{frame}
+
+\begin{frame}{Comparison Table}
+    \begin{tabularx}{1.0\textwidth} { 
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X
+        | >{\centering\arraybackslash}X | }
+        \hline Paper & Techniques & Pros & Cons \\
+        \hline Multi-Torrent: a Performance Study & Multi Torrent seeding & Faster transfer speeds, incentivises users to seed & Slightly updated version of bit torrent protocol hence all clients may not support it \\
+        \hline Analyzing The DC File Sharing Network & Hub model & Requires a central hub for distribution & Search queries are not cache, many duplicate text queries were present ``\\
+        \hline
+    \end{tabularx}
+\end{frame}
+
+
+
+\begin{frame}
+ \large{ THANK YOU !!}
+\end{frame}
+
+\end{document}
+
+
+\section{}
+\begin{frame}
+ \large {Thank You}
+\end{frame}
+
+
+\end{document}

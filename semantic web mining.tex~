@@ -1,0 +1,501 @@
+\documentclass[9pt]{beamer}
+%\usefonttheme{serif} 
+\usepackage{multimedia}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{caption}
+
+
+\usetheme{JuanLesPins}
+\begin{document}
+\begin{frame}
+\flushleft{}
+\title {\textbf{Semantic Web Mining: Ontology-Based Approach}\\
+}
+\author { Bijumon.T \\
+Asst. Professor, Computer Science & Engineering :\\
+Govt. Model Engineering College\\
+ Thrikkakkara }\\
+\maketitle
+%  \frametitle{M.Tech Project Initial Presentation }
+\end{frame}
+\begin{frame}[shrink]{Outline}
+
+\tableofcontents[pausesections]
+\end{frame}
+
+\section{Introduction}
+\begin {frame}[shrink]
+\begin{itemize}
+	\item The World Wide Web is today's largest warehouse of knowledge.
+\item Documents over the Web is largely unorganized.
+\item  Web is accessible only for humans.
+\item Computers understand only the Web pages' structure and layout and have no
+access to their intended meaning.
+\item The Semantic Web aims to enrich the existing
+Web with a layer of machine interpretable meta data so that a computer program
+can draw conclusions.
+
+\end{itemize}
+ 	\begin{block}{Semantic Web Mining}
+  Web Mining applies data mining techniques to Web.  \alert { Semantic Web Mining} aims
+at combining the two emergent research areas,  Semantic Web and Web Mining.
+	\end{block}
+	\begin{center}
+	\includegraphics[scale=0.27]{wmining.png}
+\end{center}
+\end{frame}
+\section{Literature Survey}
+\begin{frame}
+\begin{block}{Tim Berners-Lee, 1999}
+I have a dream for the Web in which computers become capable of analyzing all the data on the Web. The content, links, and transactions between people and computers. A 'Semantic Web', which should make this possible, has yet to emerge, but when it does, the day-to-day mechanisms of trade, bureaucracy and our daily lives will be handled by machines talking to machines
+\end{block}
+\begin{itemize}
+	 \item The increasing interest in Web
+information retrieval led to the Semantic Web initiative from the World-Wide Web Consortium.
+\item The Semantic Web is the  manifestation of graph
+theory and description logic.
+
+\end{itemize}
+\begin{center}
+	\includegraphics[scale=0.33]{smlayercake.png}
+	\captionof{figure}{Semantic Web Layer Cake}
+	
+\end{center}
+
+\end {frame}
+ \subsection{Research Scope}
+\begin{frame}
+
+ Web mining offers three areas 
+ for  research 
+\begin{itemize}
+	\item Web usage mining : analyses the user behavior
+         \item web structure mining: explores the hyper link structure
+           \item Web content mining: exploits the contents of the documents in the web.
+\end{itemize}      
+   Among the three research areas, ontology approach is best suitable for Web content
+mining . 
+\begin{itemize}
+	\item An ontology is an explicit specification of a conceptualization
+.
+\item In computer science, the word ontology, borrowed from philosophy, represents a set of
+precisely defined terms (vocabulary) about a specific domain 
+\item An ontology  enables people to agree upon the meaning of terms used in a 
+domain.
+
+\end{itemize}     
+  \end{frame}
+\section{Semantic Web Technologies: State of The Art }
+\begin{frame}
+
+ \begin{itemize}
+ 
+
+  
+\item Two aspects of Semantic Web programming:
+\begin{enumerate}
+	\item Information Modeling 
+\item  Application level integration
+\end{enumerate}
+  
+\item   Information Modeling  can be broken into two subproblems:
+\begin{enumerate}
+	\item Syntax sharing problem 
+          \item Semantic sharing problem.
+\end{enumerate}
+
+\item Finding a common medium
+for communication is analogous to the syntactic aspect of sharing data.
+
+
+\item Finding a mutually intelligible encoding of concepts within the
+common medium is analogous to the semantic data-sharing problem.
+\item The combination of data and metadata solves  the information sharing
+problem at the semantic level.
+
+\end{itemize}
+ \end{frame} 
+\subsection{The Semantic Web Information Model : RDF}
+\begin{frame}
+
+ \begin{itemize}
+\item Resource Description Framework is the data
+model used by the Semantic Web
+ \item In RDF, information is represented as a set of assertions called
+statements made up of three parts: subject, predicate, and object (triples).
+\item In RDF, resources can represent anything that can be named. A resource is,
+in fact, nothing but a name that represents an object, act, or concept.
+\item Resource names take the form of Internationalized Resource Identifiers.
+  \end{itemize}
+\begin{center}
+	\includegraphics[scale=0.35]{2-1.png}
+	
+\end{center}
+
+\begin{center}
+	\includegraphics[scale=0.25]{2-2.png}
+	\captionof{figure}{Graph Describing The Listing }
+	\label{fig:3.2}
+\end{center}
+
+
+\begin{center}
+	\includegraphics[scale=0.27]{2-3.png}
+	\captionof{figure}{People as Resource }
+	\label{fig:3.3}
+\end{center}
+
+
+ \end{frame}
+\subsection{RDF Serializations}
+\begin{frame}
+
+\begin{center}
+	\includegraphics[scale=0.25]{2-4.png}
+\end{center}
+\begin{itemize}
+	\item RDF graphs are powerful tools for representing information, but they are
+ good for human analysis unsuitable for application exchange.
+\item Serialization makes RDF practical for information exchange by providing a
+way to convert between the abstract model and a concrete format, such as
+a file or other byte stream.
+\item Three of the most popular RDF Serialization formats  are:
+\begin{enumerate}
+	\item  RDF/XML
+\item Terse RDF Triple
+Language (Turtle)
+\item  N-Triples
+\end{enumerate}
+
+
+ \end{itemize}
+                 
+\end{frame}
+
+
+\subsection{Expressing Semantics in RDF}
+\begin{frame}
+
+
+\begin{itemize}
+	\item To add meaning to RDF graphs,  needs
+some means of defining a vocabulary of predefined terms with accompanying
+semantics for describing the information.
+\item The Semantic Web uses a combination of a schema language and an
+ontology language to provide the capabilities of vocabularies, taxonomies, and
+ontologies.
+\item RDF Schema (RDFS) provides a specific vocabulary for RDF that
+can be used to define taxonomies of classes and properties and simple domain
+and range specifications for properties.
+\item RDFS vocabularies describe the classes of resources and properties being
+used in an RDF model.
+
+ \end{itemize} 
+\begin{center}
+	\includegraphics[scale=0.30]{2-6.png}
+\end{center}               
+\end{frame}
+\subsection{Ontology}
+\begin{frame}
+
+
+\begin{itemize}
+	\item The term Ontology ( Greek words onto for existence,  and logos for science)
+
+\item The key role that ontologies are likely to play in the future of the Web has led to the extension of Web markup languages.
+\item  In the context of the Semantic Web, an ontology language should:
+\begin{enumerate}
+	\item be compatible with existing Web standards
+\item define terms precisely and formally with adequate expressive power
+\item be easy to understand and use
+\item provide automated reasoning support 
+\item provide richer service descriptions which could be interpreted by intelligent agents
+\item be sharable across applications.
+
+
+\end{enumerate}
+\end {itemize}
+                 
+\end{frame}
+
+
+
+\subsection{OWL}
+\begin{frame}
+
+
+\begin{itemize}
+	\item W3C has designed the Web Ontology Language
+\item  It is built on W3C standards RDF/RDFS  and extends these languages with richer modeling primitives.
+\item  It is a revision of the DAML+OIL
+
+\item OWL allows:
+\begin{itemize}
+	\item the formalization of a domain by defining classes and properties of those classes, 
+\item the definition of individuals and the assertion of properties about them, and 
+\item the reasoning about these classes and individuals.
+\end{itemize}
+\item OWL, layered on top of RDFS, extends RDFS capabilities.
+\item OWL adds various constructors for building complex class expressions, cardinality restrictions on properties, characteristics of properties and mapping between classes and individuals 
+\item  An ontology in OWL is a set of axioms describing classes, properties and facts about individuals.
+
+
+
+\end {itemize}
+                 
+\end{frame}
+
+\subsection{Querying The Semantic Web}
+\begin{frame}
+
+
+\begin{itemize}
+	\item Querying the Semantic Web requires a language that recognizes RDF 
+\item  SPARQL is a recursive acronym for SPARQL Protocol
+and RDF Query Language 
+\item  An RDF data store is a special database system built for the
+storage and retrieval of RDF statements.
+\item 
+A SPARQL endpoint can be understood as an interface that users (human or application)
+can access to query an RDF data store by using SPARQL query language.
+\item SPARQL provides four different forms of query:
+\begin{enumerate}
+	\item SELECT query
+\item ASK query
+\item DESCRIBE query
+\item CONSTRUCT query
+
+\end{enumerate}
+
+\end {itemize}
+                 
+\end{frame}
+\section{Research Aim and Objectives}
+\begin{frame}
+
+
+\begin{block}{Research Aim and Objectives}
+	  Aim of this paper is to formulate an automated information retrieval
+system prototype which provides semantic web visualization environment  as an interface and uses various
+Semantic Web mechanisms in order to provide relevant information to end users or communities of
+users. To achieve this goal, Web pages must be annotated, using the terms defined in an ontology.
+Once the pages are semantically annotated, agents/applications  uses existing meta data and inference engines to
+answer queries.
+\end{block}
+
+
+        
+\begin{center}
+	\includegraphics[scale=0.28]{project1.png}
+	\captionof{figure}{Prototype an Abstract View}
+	\end{center}  
+
+\end{frame}
+\subsection{Architecture }
+\begin{frame}
+\begin{itemize}
+	\item Starting from a textual search, the user is presented with a rich aggregate of information about the entity likely identified
+with the query.
+\item  Queries can be about people whose  FOAF Ontology based  annotation published  on the Semantic Web 
+\item As the user visualizes the aggregate, he can follow links to other properties, switching the focus of visualization to that of neighboring entities.
+\end{itemize}
+
+ 
+
+\begin{center}
+	\includegraphics[scale=0.35]{layer.png}
+	\captionof{figure}{Layered View of The Prototype}
+	\label{fig:4.2}
+\end{center}
+
+
+\end{frame}
+
+\subsection{Software Tools for Semantic Web Programming} 
+\begin{frame}
+
+
+
+
+Many tools and methodologies exist for the construction of ontologies. Some potential candidates are listed below.These tools may be divided into two groups
+\begin{enumerate}
+	\item Tools for which the knowledge model is directly formalized in an ontology language:
+\begin{itemize}
+	\item Ontolingua Server
+        \item OntoSaurus (Loom)
+        \item OILed (OIL then DAML+OIL then OWL)
+        \item Inference engines such as Fact and Racer
+\end{itemize}
+   \item Tools for which the knowledge model is independent from the ontology language:
+\begin{itemize}
+	\item Protege-OWL
+        \item OntoEdit
+        \item KAON
+\end{itemize}
+\end{enumerate}
+
+\end{frame}
+\subsection{APIs for Semantic Web Programming} 
+\begin{frame}
+
+\begin{itemize}
+	\item Jena is a programmer's API (application programming interface) for Java semantic
+web applications. 
+\item Primary use of Jena is to  write Java code that handles
+RDF and OWL documents and descriptions.
+\item  In Jena, a graph is called a model and is represented by the Model interface
+\item The Named Graphs API for Jena (NG4J) is an extension to the Jena Semantic Web framework for parsing, manipulating and serializing sets of Named Graphs.
+\item Sindice is a platform to build applications on top of named graphs . Sindice collects Web Data in many ways, following existing web standards, and offers Search and Querying across this data, updated live every few minutes.
+\ite Sinice API consists of the following APIs
+\begin{itemize}
+	 
+\item Sindice Search API
+\item Sindice Cache API
+\item Sindice Live API
+\item Sindice Ping Submission API
+\item Sigma API
+\end{itemize}
+\end{itemize}
+\end{frame}
+\subsection{SPARQL Engine } 
+\begin{frame}
+\begin{itemize}
+
+\item Joseki is a Web-based SPARQL endpoint.
+\iten Joseki contains its own Web server, which hosts a Java servlet engine to support its SPARQL endpoint.
+\item  It renders a Web query form so that user can enter the query manually, and by submitting the query form, it will return  the query result right away.
+\end{itemize}
+\begin{center}
+	\includegraphics[scale=0.30]{jesoki1.png}
+\end{center}
+\end{frame}
+
+\subsection{Prototype Design }
+\begin{frame}
+
+ To get an entity profile,  the user enters a textual query or inputs
+URLs. The keyword and structured queries provided by the user form
+the initial Query Plan. The Query Plan, is then passed along as in the following steps:
+
+
+\begin{center}
+	\includegraphics[scale=0.30]{sigmadataflow.png}
+	\captionof{figure}{Sigma Data Flow}
+ \end {center}
+\end{frame}
+
+\subsection{Domain Ontology: FOAF}
+\begin{frame}
+\begin{itemize}
+	\item FOAF stands for Friend of a Friend
+         \item FOAF is  a vocabulary (or, ontology) which includes the
+basic terms to describe personal information, such as who you are, what you do,
+and who your friends are.
+\item It serves as a standard for everyone who wants to mark
+up their home pages and turn them into the documents that can be processed by
+machines.
+\end{itemize}
+  \begin{center}
+	\includegraphics[scale=0.32]{foaffile.png}
+	\captionof{figure}{FOAF file}
+\end{center}
+
+
+\end{frame}
+
+
+
+\section{Testing The Prototype}
+\begin{frame}
+Graph view of the above FOAF file can be obtained from the Inspector (Beta) API of Sindice
+\begin{center}
+	\includegraphics[scale=0.25]{foafgraph.png}
+\end{center}
+\end{frame}
+\section{Testing The Prototype Cont.}
+\begin{frame}	
+
+Testing the prototype with FOAF profile of Bijumon Thoppil
+\begin{center}
+	\includegraphics[scale=0.25]{bijuresult.png}
+	
+	
+\end{center}
+
+
+\end{frame}
+\section{Challenges and Obstacles}
+\begin{frame}
+\begin{itemize}
+	\item This  work is designed to work on yet to emerge semantic web environment.
+\item Most of the semantic web terminologies are in a premature stage and technologies
+are yet to converge.
+\item Most of the tools and APIs used are products of academic
+research and difficult to integrate.
+\item MVC architecture is not suitable for semantic web programming
+\item In order to capture formal constraints, an additional constraint language  has to be used along with UML to incorporate semantic web concepts.
+\item Technical issues such as scalability and usability.
+\item Social issues (trust, privacy, etc.)
+\item Economic issues (building a critical mass)
+\end{itemize}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}
+\begin{itemize}
+	\item The Semantic Web is big. It is fluid. It is dynamic and
+evolving.
+\item This paper summarizes the use of ontology in Web mining. 
+\item  Through this work it is proved  that ontology was undoubtedly a key concept on Semantic Web and Semantic web mining  pathway.
+\item The future Semantic Web development will depend on the progress of ontologies engineering.
+\item Further investigating this interplay will give rise to new research
+questions and stimulate further research both in the Semantic
+Web and in Web Mining,towards the ultimate goal of
+Semantic Web Mining: a better Web, for all of its users
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\section{Reference}
+\begin{frame}
+
+
+[1] Cavtat-Dubrovnik, Croatia, " Web Mining: From Web to Semantic Web",\emph{First EuropeanWeb Mining Forum,EWMF2003,Invited and Selected Revised Papers Springer,2003}\\
+
+[2] Liyang Yu, "A Developer's Guide to the Semantic Web" \emph{Springer}\\
+
+[3] Ramesh Jain University of California, Amit Sheth Irvine University of Georgia "Ontology Alignment
+Bridging the Semantic Gap''\emph{Computing for Human Experience Series,Springer}\\
+
+[4] Liyang Yu, "Introduction to the Semantic Web
+and Semantic Web Services."\emph{Chapman & Hall/CRC
+Taylor & Francis Group}\\
+
+[5] Michael C. Daconta, Leo J. Obrst and Kevin T. Smith, "The Semantic Web: A Guide to the Future of XML, Web Services, and Knowledge Management"\emph   {John Wiley & Sons © 2003 }\\
+  
+[6] Dean Allemang James Hendler, "Semantic Web for the Working
+Ontologist Modeling in RDF, RDFS and OWL."\emph{Morgan Kaufmann publication}\\
+
+[7] John Hebeler Matthew Fisher Ryan Blace Andrew Perez-Lopez, "Semantic Web Programming ."\emph{Wiley Publishing, Inc.}\\
+
+[8] Gomez-Porez YongYu Ying Ding (Eds.) , "Proceedings Asuncion ."\emph{The SemanticWeb Fourth Asian Conference, ASWC 2009 Shanghai, China, December 6-9, 2009}\\
+
+[9] Zongmin Ma Northeastern University, China Huaiqing Wang City University of Hong Kong, "The Semantic Web for
+Knowledge and Data Management: Technologies and Practices  "\emph{ Hong Kong  Information Science Reference (an imprint of IGI Global)}\\
+
+\end{frame}
+\section{Conclusion}
+\begin{frame}
+\begin{center}
+	\includegraphics[scale=0.30]{Qs.png}
+\end{center}
+\end{frame}
+
+\end{document}
